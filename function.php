@@ -7,16 +7,27 @@
 global $song;
 
 
-echo $song['title'];
-echo "<br>";
+function printChorus() {
+    global $song;
 
-foreach ($song['data'] as $key => $paroles) {
-    echo "<br>";
-    
-    foreach ($paroles as $key2 => $parole) {
-
-        echo  "$key : ligne => $key2 $parole <br>";
+    foreach($song['data']['chorus']['chorus_1'] as $line) {
+        echo $line . "<br>";
     }
+
+    echo "<br>";
 }
-echo "<br>";
+
+echo $song['title'] . "<br><br>";
+
+foreach ($song['data']['verse'] as $paroles) {
+    printChorus();
+    
+    foreach ($paroles as  $parole) {
+
+        echo  " $parole <br>";
+    }
+
+    echo "<br>";
+}
+
 echo $song['author'];
