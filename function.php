@@ -10,10 +10,11 @@ global $song;
 echo $song['title'];
 echo "<br>";
 
-    foreach ($song['data'] as $paroles) {
+    foreach ($song['data'] as $key => $paroles) {
         echo "<br>";
     foreach ($paroles as $parole) {
-        echo "$parole <br>";
+
+        echo "$key : $parole <br>";
     }
 }
 echo "<br>";
