@@ -11,10 +11,12 @@ echo $song['title'];
 echo "<br>";
 
 
-    foreach ($song['data'] as $paroles) {
+
+    foreach ($song['data'] as $key1 => $paroles) {
         echo "<br>";
+        
     foreach ($paroles as $key => $parole) {
-        if ($key%2 == 1){
+        if ($key%2 === 1 && $key1 != "chorus_1" && $key1 != "chorus_2" ){
         continue;
         }
         echo "$parole <br>";
