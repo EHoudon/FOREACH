@@ -11,9 +11,21 @@ echo $song['title'];
 echo "<br><br>";
 
 
-foreach ($song['refrain'] as $Refrain){
+foreach ($song['chorus'] as $Refrain){
     echo "$Refrain <br>";
+}
+echo "<br>";
+foreach ($song['first_verse'] as $Verset){
+    echo "$Verset <br>";
+}
+echo "<br>";
+foreach ($song['chorus'] as $Refrain){
+    echo "$Refrain <br>";
+}
 
+echo "<br>";
+foreach ($song['second_verse'] as $SVerset){
+    echo "$SVerset <br>";
 }
 echo "<br>";
 echo  $song['author'];
