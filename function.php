@@ -8,24 +8,13 @@ global $song;
 
 
 echo $song['title'];
-echo "<br><br>";
+echo "<br>";
 
-
-foreach ($song['chorus'] as $Refrain){
-    echo "$Refrain <br>";
+    foreach ($song['data'] as $paroles) {
+        echo "<br>";
+    foreach ($paroles as $parole) {
+        echo "$parole <br>";
+    }
 }
 echo "<br>";
-foreach ($song['first_verse'] as $Verset){
-    echo "$Verset <br>";
-}
-echo "<br>";
-foreach ($song['chorus'] as $Refrain){
-    echo "$Refrain <br>";
-}
-
-echo "<br>";
-foreach ($song['second_verse'] as $SVerset){
-    echo "$SVerset <br>";
-}
-echo "<br>";
-echo  $song['author'];
+echo $song['author'];
